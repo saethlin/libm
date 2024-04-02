@@ -88,7 +88,7 @@ fn sin_pi(mut x: f32) -> f32 {
     x = 2.0 * (x * 0.5 - floorf(x * 0.5)); /* x mod 2.0 */
 
     n = (x * 4.0) as isize;
-    n = div!(n + 1, 2);
+    n = (n + 1) / 2;
     y = (x as f64) - (n as f64) * 0.5;
     y *= 3.14159265358979323846;
     match n {

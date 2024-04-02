@@ -152,7 +152,7 @@ fn sin_pi(mut x: f64) -> f64 {
     x = 2.0 * (x * 0.5 - floor(x * 0.5)); /* x mod 2.0 */
 
     n = (x * 4.0) as i32;
-    n = div!(n + 1, 2);
+    n = (n + 1) / 2;
     x -= (n as f64) * 0.5;
     x *= PI;
 

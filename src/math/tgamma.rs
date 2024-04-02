@@ -37,7 +37,7 @@ fn sinpi(mut x: f64) -> f64 {
 
     /* reduce x into [-.25,.25] */
     n = (4.0 * x) as isize;
-    n = div!(n + 1, 2);
+    n = (n + 1) / 2;
     x -= (n as f64) * 0.5;
 
     x *= PI;
