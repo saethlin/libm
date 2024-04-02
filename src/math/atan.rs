@@ -82,12 +82,6 @@ pub fn atan(x: f64) -> f64 {
     let id = if ix < 0x3fdc_0000 {
         /* |x| < 0.4375 */
         if ix < 0x3e40_0000 {
-            /* |x| < 2^-27 */
-            if ix < 0x0010_0000 {
-                /* raise underflow for subnormal x */
-                force_eval!(x as f32);
-            }
-
             return x;
         }
 
